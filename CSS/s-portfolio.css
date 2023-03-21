@@ -1,0 +1,278 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.header {
+    height: 86px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px #222 solid;
+}
+.folio-main {
+    display: flex;
+    height: calc(100% - 140px);
+}
+.logo-space {
+    height: 84px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo {
+    height: 84px;
+    transition: 0.3s;
+    transition-timing-function: ease-in;
+}
+.logo:hover {
+    height: 78px;
+}
+.navbar {
+    line-height: 50px;
+    margin: auto 0;
+    width: 60rem;
+}
+.lista {
+    display: flex;
+    font-size: 1.8rem;
+    list-style: none;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+li a {
+    text-decoration: none;
+    color: #222;
+    transition: 0.3s;
+    transition-timing-function: ease-in;
+}
+li a:hover {
+    font-size: 1.8rem;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+.courses {
+    flex: 2 1rem;
+}
+.consulting {
+    flex: 1 3rem;
+}
+.retouch {
+    flex: 1 1rem;
+}
+.studio {
+    flex: 1;
+}
+.photo {
+    flex: 1 4rem;
+}
+.portfolio {
+    flex: 1 1rem;
+}
+.beauty:hover, .comercial:hover, .editorial:hover, .portraits:hover {
+    opacity: 50%;
+    transition: 0.5s;
+}
+.beauty, .comercial, .editorial, .portraits {
+    transition: 1s;
+    height: calc(100% - 140px);
+    width: 25vw;
+    text-align: center;
+}
+.text-1, .text-2, .text-3, .text-4 {
+    width: 25vw;
+    height: inherit;
+    align-self: center;
+    justify-content: center;
+    position: absolute;
+    color: white;
+    font-size: 72px;
+    z-index: 1;
+    display: none;
+    transition: 1s;
+}
+.text-2 {
+    left: 25%;
+}
+.text-3 {
+    left: 50%;
+}
+.text-4 {
+    left: 75%;
+}
+.beauty:hover ~ .text-1, .text-1:hover {
+    display: flex;
+}
+.beauty:has(~ .text-1:hover){
+    opacity: 50%;
+}
+.comercial:hover ~ .text-2, .text-2:hover {
+    display: flex;
+}
+.comercial:has(~ .text-2:hover){
+    opacity: 50%;
+}
+.editorial:hover ~ .text-3, .text-3:hover {
+    display: flex;
+}
+.editorial:has(~ .text-3:hover){
+    opacity: 50%;
+}
+.portraits:hover ~ .text-4, .text-4:hover {
+    display: flex;
+}
+.portraits:has(~ .text-4:hover){
+    opacity: 50%;
+}
+.galleries {
+    width: 100vw;
+    height: calc(100% -140px);
+    display: flex;
+    background-color: #222;
+    position: relative;
+    overflow: hidden;
+}
+.row-1a, .row-2a, .row-3a, .row-4a, .row-1b, .row-2b, .row-3b, .row-4b {
+    position: absolute;
+    height: inherit;
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+}
+.row-1a {
+    animation: firstone 50s linear infinite;
+    animation-delay: 0.5s;
+}
+.row-1b {
+    animation: firsttwo 50s linear infinite;
+    animation-delay: 0.5s;
+}
+@keyframes firstone {
+    from {
+        top: 0px;
+    }
+    to {
+        top: calc(25vw * -10.09);
+    }
+}
+@keyframes firsttwo {
+    from {
+        top: calc(25vw * 10.09);
+    }
+    to {
+        top: 0px;
+    }
+}
+.row-2a {
+    animation: secondone 45s linear infinite;
+    animation-delay: 0.5s;
+}
+.row-2b {
+    animation: secondtwo 45s linear infinite;
+    animation-delay: 0.5s;
+}
+@keyframes secondone {
+    from {
+        top: calc(25vw * -8.21);
+    }
+    to {
+        top: 0px;
+    }
+}
+@keyframes secondtwo {
+    from {
+        top: 0px;
+    }
+    to {
+        top: calc(25vw * 8.21);
+    }
+}
+.row-3a {
+    animation: thirdone 60s linear infinite;
+    animation-delay: 0.5s;
+}
+.row-3b {
+    animation: thirdtwo 60s linear infinite;
+    animation-delay: 0.5s;
+}
+@keyframes thirdone {
+    from {
+        top: 0px;
+    }
+    to {
+        top: calc(25vw * -12.86);
+    }
+}
+@keyframes thirdtwo {
+    from {
+        top: calc(25vw * 12.86);
+    }
+    to {
+        top: 0px;
+    }
+}
+.row-4a {
+    animation: fourthone 55s linear infinite;
+    animation-delay: 0.5s;
+}
+.row-4b {
+    animation: fourthtwo 55s linear infinite;
+    animation-delay: 0.5s;
+}
+@keyframes fourthone {
+    from {
+        top: calc(25vw * -11.1);
+    }
+    to {
+        top: 0px;
+    }
+}
+@keyframes fourthtwo {
+    from {
+        top: 0px;
+    }
+    to {
+        top: calc(25vw * 11.1);
+    }
+}
+.miniature {
+    width: 25vw;
+}
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    display: none;
+}
+.pie {
+    padding-top: 5px;
+    padding: 5px 30px 0;
+    display: flex;
+    height: 5.4rem;
+    font-weight: 100;
+    font-size: 12px;
+    justify-content: space-between;
+}
+.pie ul {
+    display: flex;
+}
+.pie ul li {
+    margin: 0 20px;
+    list-style: none;
+}
+.rrss {
+    width: 25px;
+}
